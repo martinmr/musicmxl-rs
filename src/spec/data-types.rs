@@ -5,7 +5,6 @@ pub enum AboveBelow {
     Below,
 }
 
-// TODO: Add all values.
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
 #[serde(rename_all = "kebab-case")]
 pub enum AccidentalValue {
@@ -17,6 +16,46 @@ pub enum AccidentalValue {
     FlatFlat,
     NaturalSharp,
     NaturalFlat,
+    QuarterFlat,
+    QuarterSharp,
+    ThreeQuartersFlat,
+    ThreeQuartersSharp,
+    SharpDown,
+    SharpUp,
+    NaturalDown,
+    NaturalUp,
+    FlatDown,
+    FlatUp,
+    DoubleSharpDown,
+    DoubleSharpUp,
+    FlatFlatDown,
+    FlatFlatUp,
+    ArrowDown,
+    ArrowUp,
+    TripleSharp,
+    TripleFlat,
+    SlashQuarterSharp,
+    SlashSharp,
+    DoubleSlashFlat,
+    #[serde(rename = "sharp-1")]
+    Sharp1,
+    #[serde(rename = "sharp-2")]
+    Sharp2,
+    #[serde(rename = "sharp-3")]
+    Sharp3,
+    #[serde(rename = "sharp-5")]
+    Sharp5,
+    #[serde(rename = "flat-1")]
+    Flat1,
+    #[serde(rename = "flat-2")]
+    Flat2,
+    #[serde(rename = "flat-3")]
+    Flat3,
+    #[serde(rename = "flat-4")]
+    Flat4,
+    Sori,
+    Koron,
+    Other,
 }
 
 #[derive(Debug, Deserialize_repr, PartialEq, Serialize_repr)]

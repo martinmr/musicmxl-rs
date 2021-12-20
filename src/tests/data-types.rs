@@ -70,6 +70,102 @@ fn accidental() {
                 Some(super::AccidentalValue::NaturalFlat),
                 "natural-flat".to_string(),
             ),
+            (
+                Some(super::AccidentalValue::QuarterFlat),
+                "quarter-flat".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::QuarterFlat),
+                "quarter-flat".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::QuarterSharp),
+                "quarter-sharp".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::ThreeQuartersFlat),
+                "three-quarters-flat".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::ThreeQuartersSharp),
+                "three-quarters-sharp".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::SharpDown),
+                "sharp-down".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::SharpUp),
+                "sharp-up".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::NaturalDown),
+                "natural-down".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::NaturalUp),
+                "natural-up".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::FlatDown),
+                "flat-down".to_string(),
+            ),
+            (Some(super::AccidentalValue::FlatUp), "flat-up".to_string()),
+            (
+                Some(super::AccidentalValue::DoubleSharpDown),
+                "double-sharp-down".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::DoubleSharpUp),
+                "double-sharp-up".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::FlatFlatDown),
+                "flat-flat-down".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::FlatFlatUp),
+                "flat-flat-up".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::ArrowDown),
+                "arrow-down".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::ArrowUp),
+                "arrow-up".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::TripleSharp),
+                "triple-sharp".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::TripleFlat),
+                "triple-flat".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::SlashQuarterSharp),
+                "slash-quarter-sharp".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::SlashSharp),
+                "slash-sharp".to_string(),
+            ),
+            (
+                Some(super::AccidentalValue::DoubleSlashFlat),
+                "double-slash-flat".to_string(),
+            ),
+            (Some(super::AccidentalValue::Sharp1), "sharp-1".to_string()),
+            (Some(super::AccidentalValue::Sharp2), "sharp-2".to_string()),
+            (Some(super::AccidentalValue::Sharp3), "sharp-3".to_string()),
+            (Some(super::AccidentalValue::Sharp5), "sharp-5".to_string()),
+            (Some(super::AccidentalValue::Flat1), "flat-1".to_string()),
+            (Some(super::AccidentalValue::Flat2), "flat-2".to_string()),
+            (Some(super::AccidentalValue::Flat3), "flat-3".to_string()),
+            (Some(super::AccidentalValue::Flat4), "flat-4".to_string()),
+            (Some(super::AccidentalValue::Sori), "sori".to_string()),
+            (Some(super::AccidentalValue::Koron), "koron".to_string()),
+            (Some(super::AccidentalValue::Other), "other".to_string()),
         ],
         phantom: PhantomData,
     };
