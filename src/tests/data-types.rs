@@ -232,6 +232,23 @@ fn arrow_direction() {
 }
 
 #[test]
+fn arrow_style() {
+    let tests = DataTypeTest::<super::ArrowStyle> {
+        cases: vec![
+            (Some(super::ArrowStyle::Combined), "combined".to_string()),
+            (Some(super::ArrowStyle::Double), "double".to_string()),
+            (Some(super::ArrowStyle::Filled), "filled".to_string()),
+            (Some(super::ArrowStyle::Hollow), "hollow".to_string()),
+            (Some(super::ArrowStyle::Other), "other".to_string()),
+            (Some(super::ArrowStyle::Paired), "paired".to_string()),
+            (Some(super::ArrowStyle::Single), "single".to_string()),
+        ],
+        phantom: PhantomData,
+    };
+    tests.run_tests();
+}
+
+#[test]
 fn backward_foward() {
     let tests = DataTypeTest::<super::BackwardForward> {
         cases: vec![
@@ -240,6 +257,26 @@ fn backward_foward() {
                 "backward".to_string(),
             ),
             (Some(super::BackwardForward::Forward), "forward".to_string()),
+        ],
+        phantom: PhantomData,
+    };
+    tests.run_tests();
+}
+
+#[test]
+fn bar_style() {
+    let tests = DataTypeTest::<super::BarStyle> {
+        cases: vec![
+            (Some(super::BarStyle::Dashed), "dashed".to_string()),
+            (Some(super::BarStyle::Dotted), "dotted".to_string()),
+            (Some(super::BarStyle::HeavyHeavy), "heavy-heavy".to_string()),
+            (Some(super::BarStyle::HeavyLight), "heavy-light".to_string()),
+            (Some(super::BarStyle::LightHeavy), "light-heavy".to_string()),
+            (Some(super::BarStyle::LightLight), "light-light".to_string()),
+            (Some(super::BarStyle::None), "none".to_string()),
+            (Some(super::BarStyle::Regular), "regular".to_string()),
+            (Some(super::BarStyle::Short), "short".to_string()),
+            (Some(super::BarStyle::Tick), "tick".to_string()),
         ],
         phantom: PhantomData,
     };
@@ -260,6 +297,39 @@ fn beam_level() {
             (Some(super::BeamLevel::Seven), "7".to_string()),
             (Some(super::BeamLevel::Eight), "8".to_string()),
             (None, "9".to_string()),
+        ],
+        phantom: PhantomData,
+    };
+    tests.run_tests();
+}
+
+#[test]
+fn beam_value() {
+    let tests = DataTypeTest::<super::BeamValue> {
+        cases: vec![
+            (
+                Some(super::BeamValue::BackwardHook),
+                "backward hook".to_string(),
+            ),
+            (Some(super::BeamValue::Begin), "begin".to_string()),
+            (Some(super::BeamValue::Continue), "continue".to_string()),
+            (Some(super::BeamValue::End), "end".to_string()),
+            (
+                Some(super::BeamValue::ForwardHook),
+                "forward hook".to_string(),
+            ),
+        ],
+        phantom: PhantomData,
+    };
+    tests.run_tests();
+}
+
+#[test]
+fn bend_shape() {
+    let tests = DataTypeTest::<super::BendShape> {
+        cases: vec![
+            (Some(super::BendShape::Angled), "angled".to_string()),
+            (Some(super::BendShape::Curved), "curved".to_string()),
         ],
         phantom: PhantomData,
     };

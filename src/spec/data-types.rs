@@ -88,7 +88,6 @@ pub enum ArrowDirection {
     UpDown,
 }
 
-// TODO: arrow-style tests
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
 #[serde(rename_all = "lowercase")]
 pub enum ArrowStyle {
@@ -109,6 +108,21 @@ pub enum BackwardForward {
 }
 
 // TODO: bar-style
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum BarStyle {
+    Dashed,
+    Dotted,
+    Heavy,
+    HeavyHeavy,
+    HeavyLight,
+    LightHeavy,
+    LightLight,
+    None,
+    Regular,
+    Short,
+    Tick,
+}
 
 #[derive(Debug, Deserialize_repr, PartialEq, Serialize_repr)]
 #[repr(u8)]
@@ -123,7 +137,6 @@ pub enum BeamLevel {
     Eight,
 }
 
-// TODO: beam-value tests
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
 #[serde(rename_all = "lowercase")]
 pub enum BeamValue {
@@ -137,6 +150,28 @@ pub enum BeamValue {
 }
 
 // TODO: beater-value
+pub enum BeaterValue {
+    // bow
+// chime hammer
+// coin
+// drum stick
+// finger
+// fingernail
+// fist
+// guiro scraper
+// hammer
+// hand
+// jazz stick
+// knitting needle
+// metal hammer
+// slide brush on gong
+// snare stick
+// spoon mallet
+// superball
+// triangle beater
+// triangle beater plain
+// wire brush
+}
 
 // TODO: bend-shape tests
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
@@ -147,13 +182,61 @@ pub enum BendShape {
 }
 
 // TODO: breath-mark-value
+pub enum BreathMarkValue {
+    // comma
+// tick
+// upbow
+// salzedo
+}
+
 // TODO: caesura-value
+pub enum CaesuraValue {
+    // normal
+// thick
+// short
+// curved
+// single
+}
+
 // TODO: cancel-location
+pub enum CancelLocation {
+    // left
+// right
+// before-barline
+}
+
 // TODO: circular-arrow
+pub enum CircularArrow {
+    // anticlockwise
+// clockwise
+}
+
 // TODO: clef-sign
+pub enum ClefSign {
+    // G
+// F
+// C
+// percussion
+// TAB
+// jianpu
+// none
+}
+
 // TODO: color
+
 // TODO: comma-separated-text
+
 // TODO: css-font-size
+pub enum CssFontSize {
+    // xx-small
+// x-small
+// small
+// medium
+// large
+// x-large
+// xx-large
+}
+
 // TODO: date
 // TODO: decimal
 // TODO: degree-symbol-value
