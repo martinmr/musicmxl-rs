@@ -1,8 +1,7 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
-    }
-}
+mod tests;
+
+use serde::{Serialize, Deserialize};
+use serde_repr::*;
+
+include!("spec/data-types.rs");
+include!("spec/movement.rs");
