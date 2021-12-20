@@ -5,7 +5,7 @@ fn movement_number() {
         super::MovementNumber {
             content: "number".to_string()
         },
-        from_str(xml).unwrap()
+        quick_xml::de::from_str(xml).unwrap()
     )
 }
 
@@ -16,6 +16,6 @@ fn movement_title() {
         super::MovementTitle {
             content: "title".to_string()
         },
-        from_str(xml).unwrap()
+        quick_xml::de::from_str(xml).unwrap()
     )
 }

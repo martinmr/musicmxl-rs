@@ -1,6 +1,6 @@
 mod tests;
 
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 use serde_repr::*;
 
 include!("spec/data-types.rs");

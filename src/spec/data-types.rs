@@ -1,29 +1,21 @@
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum AboveBelow {
-    #[serde(rename = "above")]
     Above,
-    #[serde(rename = "below")]
     Below,
 }
 
 // TODO: Add all values.
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
 pub enum AccidentalValue {
-    #[serde(rename = "sharp")]
     Sharp,
-    #[serde(rename = "natural")]
     Natural,
-    #[serde(rename = "flat")]
     Flat,
-    #[serde(rename = "double-sharp")]
     DoubleSharp,
-    #[serde(rename = "sharp-sharp")]
     SharpSharp,
-    #[serde(rename = "flat-flat")]
     FlatFlat,
-    #[serde(rename = "natural-sharp")]
     NaturalSharp,
-    #[serde(rename = "natural-flat")]
     NaturalFlat,
 }
 
@@ -36,42 +28,44 @@ pub enum AccordionMiddle {
 }
 
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum ArrowDirection {
-    #[serde(rename = "down")]
     Down,
-    #[serde(rename = "left")]
     Left,
     #[serde(rename = "left right")]
     LeftRight,
-    #[serde(rename = "northeast")]
     Northeast,
     #[serde(rename = "northeast southwest")]
     NortheastSouthwest,
-    #[serde(rename = "northwest")]
     Northwest,
     #[serde(rename = "northwest southeast")]
     NorthwestSoutheast,
-    #[serde(rename = "other")]
     Other,
-    #[serde(rename = "right")]
     Right,
-    #[serde(rename = "southeast")]
     Southeast,
-    #[serde(rename = "southwest")]
     Southwest,
-    #[serde(rename = "up")]
     Up,
     #[serde(rename = "up down")]
     UpDown,
 }
 
-// TODO: arrow-style
+// TODO: arrow-style tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum ArrowStyle {
+    Combined,
+    Double,
+    Filled,
+    Hollow,
+    Other,
+    Paired,
+    Single,
+}
 
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum BackwardForward {
-    #[serde(rename = "backward")]
     Backward,
-    #[serde(rename = "forward")]
     Forward,
 }
 
@@ -90,9 +84,29 @@ pub enum BeamLevel {
     Eight,
 }
 
-// TODO: beam-value
+// TODO: beam-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum BeamValue {
+    #[serde(rename = "backward hook")]
+    BackwardHook,
+    Begin,
+    Continue,
+    End,
+    #[serde(rename = "forward hook")]
+    ForwardHook,
+}
+
 // TODO: beater-value
-// TODO: bend-shape
+
+// TODO: bend-shape tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum BendShape {
+    Angled,
+    Curved,
+}
+
 // TODO: breath-mark-value
 // TODO: caesura-value
 // TODO: cancel-location
