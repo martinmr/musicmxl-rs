@@ -149,28 +149,42 @@ pub enum BeamValue {
     ForwardHook,
 }
 
-// TODO: beater-value
+// TODO: beater-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum BeaterValue {
-    // bow
-// chime hammer
-// coin
-// drum stick
-// finger
-// fingernail
-// fist
-// guiro scraper
-// hammer
-// hand
-// jazz stick
-// knitting needle
-// metal hammer
-// slide brush on gong
-// snare stick
-// spoon mallet
-// superball
-// triangle beater
-// triangle beater plain
-// wire brush
+    Bow,
+    #[serde(rename = "chime hammer")]
+    ChimeHammer,
+    Coin,
+    #[serde(rename = "drum stick")]
+    DrumStick,
+    Finger,
+    Fingernail,
+    Fist,
+    #[serde(rename = "guiro scraper")]
+    GuiroScraper,
+    Hammer,
+    Hand,
+    #[serde(rename = "jazz stick")]
+    JazzStick,
+    #[serde(rename = "knitting needle")]
+    KnitttingNeedle,
+    #[serde(rename = "metal hammer")]
+    MetalHammer,
+    #[serde(rename = "slide brush on gong")]
+    SlideBrushOnGong,
+    #[serde(rename = "snare stick")]
+    SnareStick,
+    #[serde(rename = "spoon mallet")]
+    SpoonMallet,
+    Superball,
+    #[serde(rename = "triangle beater")]
+    TriangleBeater,
+    #[serde(rename = "triangle beater plain")]
+    TriangleBeaterPlain,
+    #[serde(rename = "wire brush")]
+    WireBrush,
 }
 
 // TODO: bend-shape tests
@@ -181,81 +195,230 @@ pub enum BendShape {
     Curved,
 }
 
-// TODO: breath-mark-value
+// TODO: breath-mark-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum BreathMarkValue {
-    // comma
-// tick
-// upbow
-// salzedo
+    Comma,
+    Tick,
+    Upbow,
+    Salzedo,
 }
 
-// TODO: caesura-value
+// TODO: caesura-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum CaesuraValue {
-    // normal
-// thick
-// short
-// curved
-// single
+    Normal,
+    Thick,
+    Short,
+    Curved,
+    Single,
 }
 
 // TODO: cancel-location
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
 pub enum CancelLocation {
-    // left
-// right
-// before-barline
+    Left,
+    Right,
+    BeforeBarline,
 }
 
-// TODO: circular-arrow
+// TODO: circular-arrow tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum CircularArrow {
-    // anticlockwise
-// clockwise
+    Anticlockwise,
+    Clockwise,
 }
 
-// TODO: clef-sign
+// TODO: clef-sign tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
 pub enum ClefSign {
-    // G
-// F
-// C
-// percussion
-// TAB
-// jianpu
-// none
+    #[serde(rename = "G")]
+    G,
+    #[serde(rename = "F")]
+    F,
+    #[serde(rename = "C")]
+    C,
+    Percussion,
+    #[serde(rename = "TAB")]
+    Tab,
+    Jianpu,
+    None,
 }
 
 // TODO: color
 
 // TODO: comma-separated-text
 
-// TODO: css-font-size
+// TODO: css-font-size tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
 pub enum CssFontSize {
-    // xx-small
-// x-small
-// small
-// medium
-// large
-// x-large
-// xx-large
+    XxSmall,
+    XSmall,
+    Small,
+    Medium,
+    Large,
+    XLarge,
+    XxLarge,
 }
 
 // TODO: date
 // TODO: decimal
-// TODO: degree-symbol-value
-// TODO: degree-type-value
-// TODO: distance-type
+
+// TODO: degree-symbol-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum DegreeSymbolValue {
+    Major,
+    Minor,
+    Augmented,
+    Diminished,
+    HalfDiminished,
+}
+
+// TODO: degree-type-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum DegreeTypeValue {
+    Add,
+    Alter,
+    Substract,
+}
+
+#[allow(unused)]
+type DistanceType = String;
+
 // TODO: divisions
+
 // TODO: effect-value
-// TODO: enclosure-shape
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum EffectValue {
+    Anvil,
+    #[serde(rename = "auto horn")]
+    AutoHorn,
+    #[serde(rename = "bird whistle")]
+    BirdWhistle,
+    Cannon,
+    #[serde(rename = "duck call")]
+    DuckCall,
+    #[serde(rename = "gun shot")]
+    GunShot,
+    #[serde(rename = "klaxon horn")]
+    KlaxonHorn,
+    #[serde(rename = "lions roar")]
+    LionsRoar,
+    #[serde(rename = "lotus flute")]
+    LotusFlute,
+    Megaphone,
+    #[serde(rename = "police whistle")]
+    PoliceWhistle,
+    Siren,
+    #[serde(rename = "slice whistle")]
+    SlideWhistle,
+    #[serde(rename = "thunder sheet")]
+    ThunderSheet,
+    #[serde(rename = "wind machine")]
+    WindMachine,
+    #[serde(rename = "wind whistle")]
+    WindWhistle,
+}
+
+// TODO: enclosure-shape tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum EnclosureShape {
+    Rectangle,
+    Square,
+    Oval,
+    Circle,
+    Bracket,
+    InvertedBracket,
+    Triangle,
+    Diamond,
+    Pentagon,
+    Hexagon,
+    Heptagon,
+    Octagon,
+    Nonagon,
+    Decagon,
+    None,
+}
+
 // TODO: ending-number
-// TODO: fan
-// TODO: fermata-shape
+
+// TODO: fan tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Fan {
+    Accel,
+    None,
+    Rit,
+}
+
+// TODO: fermata-shape tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum FermataShape {
+    Normal,
+    Angled,
+    Square,
+    DoubleAngled,
+    DoubleSquare,
+    DoubleDot,
+    HalfCurve,
+    Curlew,
+}
+
 // TODO: fifths
 // TODO: font-family
 // TODO: font-size
-// TODO: font-style
-// TODO: font-weight
-// TODO: glass-value
-// TODO: glyph-type
-// TODO: group-barline-value
+
+// TODO: font-style tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum FontStyle {
+    Normal,
+    Italic,
+}
+
+// TODO: font-weight tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum FontWeight {
+    Normal,
+    Bold,
+}
+
+// TODO: glass-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+pub enum GlassValue {
+    #[serde(rename = "glass harmonica")]
+    GlassHarmonica,
+    #[serde(rename = "glass harp")]
+    GlassHarp,
+    #[serde(rename = "wind chimes")]
+    WindChimes,
+}
+
+#[allow(unused)]
+type GlichType = String;
+
+// TODO: group-barline-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum GroupBarlineValue {
+    Yes,
+    No,
+    #[serde(rename = "Mensurstrich")]
+    Mensurstrich,
+}
+
 // TODO: group-symbol-value
 // TODO: handbell-value
 // TODO: harmon-closed-location
