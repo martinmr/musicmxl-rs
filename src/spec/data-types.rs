@@ -253,6 +253,7 @@ pub enum ClefSign {
 // TODO: color
 
 // TODO: comma-separated-text
+// See https://docs.rs/serde-aux/latest/serde_aux/field_attributes/fn.deserialize_vec_from_string_or_vec.html
 
 // TODO: css-font-size tests
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
