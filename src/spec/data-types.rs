@@ -291,8 +291,7 @@ pub enum DegreeTypeValue {
     Substract,
 }
 
-#[allow(unused)]
-type DistanceType = String;
+pub type DistanceType = String;
 
 // TODO: divisions
 
@@ -407,8 +406,7 @@ pub enum GlassValue {
     WindChimes,
 }
 
-#[allow(unused)]
-type GlichType = String;
+pub type GlichType = String;
 
 // TODO: group-barline-value tests
 #[derive(Debug, Deserialize, PartialEq, Serialize)]
@@ -420,37 +418,356 @@ pub enum GroupBarlineValue {
     Mensurstrich,
 }
 
-// TODO: group-symbol-value
-// TODO: handbell-value
-// TODO: harmon-closed-location
-// TODO: harmon-closed-value
-// TODO: harmony-arrangement
-// TODO: harmony-type
-// TODO: hole-closed-location
+// TODO: group-symbol-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum GroupSymbolValue {
+    Brace,
+    Bracket,
+    Line,
+    None,
+    Square,
+}
+
+// TODO: handbell-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum HandbellValue {
+    Belltree,
+    Damp,
+    Echo,
+    Gyro,
+    #[serde(rename = "hand martellato")]
+    HandMartellato,
+    #[serde(rename = "mallet lift")]
+    MalletLift,
+    #[serde(rename = "mallet table,")]
+    MalletTable,
+    Martellato,
+    #[serde(rename = "martellato lift")]
+    MartellatoLift,
+    #[serde(rename = "muted martellato")]
+    MutedMartellato,
+    #[serde(rename = "pluck lift")]
+    PluckLift,
+    Swing,
+}
+
+// TODO: harmon-closed-location tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum HarmonClosedLocation {
+    Bottom,
+    Left,
+    Right,
+    Top,
+}
+
+// TODO: harmon-closed-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum HarmonClosedValue {
+    Yes,
+    No,
+    Half,
+}
+
+// TODO: harmony-arrangement tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum HarmonyArrangement {
+    Horizontal,
+    Vertical,
+    Diagonal,
+}
+
+// TODO: harmony-type tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum HarmonyType {
+    Alternate,
+    Explicit,
+    Implied,
+}
+
+// TODO: hole-closed-location tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum HoleClosedLocation {
+    Bottom,
+    Left,
+    Right,
+    Top,
+}
+
 // TODO: hole-closed-value
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum HoleClosedValue {
+    Yes,
+    No,
+    Half,
+}
+
 // TODO: ID
+
 // TODO: IDREF
+
 // TODO: integer
-// TODO: kind-value
-// TODO: left-center-right
-// TODO: left-right
-// TODO: line-end
-// TODO: line-length
-// TODO: line-shape
-// TODO: line-type
-// TODO: line-width-type
-// TODO: margin-type
-// TODO: measure-numbering-value
-// TODO: measure-text
-// TODO: membrane-value
-// TODO: metal-value
+
+// TODO: kind-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum KindValue {
+    Augmented,
+    AugmentedSeventh,
+    Diminished,
+    DiminishedSeventh,
+    Dominant,
+    #[serde(rename = "dominant-11th")]
+    Dominant11th,
+    #[serde(rename = "dominant-13th")]
+    Dominant13th,
+    DominantNinth,
+    #[serde(rename = "French")]
+    French,
+    #[serde(rename = "German")]
+    German,
+    HalfDiminished,
+    #[serde(rename = "Italian")]
+    Italian,
+    Major,
+    #[serde(rename = "major-11th")]
+    Major11th,
+    #[serde(rename = "major-13th")]
+    Major13th,
+    MajorMinor,
+    MajorNinth,
+    MajorSeventh,
+    MajorSixth,
+    Minor,
+    #[serde(rename = "minor-11th")]
+    Minor11th,
+    #[serde(rename = "minor-13th")]
+    Minor13th,
+    MinorNinth,
+    MinorSeventh,
+    MinorSixth,
+    #[serde(rename = "Neapolitan")]
+    Neapolitan,
+    None,
+    Other,
+    Pedal,
+    Power,
+    SuspendedFourth,
+    SuspendedSecond,
+    #[serde(rename = "Tristan")]
+    Tristan,
+}
+
+// TODO: left-center-right test
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum LeftCenterRight {
+    Left,
+    Center,
+    Right,
+}
+
+// TODO: left-right tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum LeftRight {
+    Left,
+    Right,
+}
+
+// TODO: line-end tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum LineEnd {
+    Up,
+    Down,
+    Both,
+    Arrow,
+    None,
+}
+
+// TODO: line-length tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum LineLength {
+    Short,
+    Medium,
+    Long,
+}
+
+// TODO: line-shape tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum LineShape {
+    Straight,
+    Curved,
+}
+
+// TODO: line-type tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum LineType {
+    Dashed,
+    Dotted,
+    Solid,
+    Wavy,
+}
+
+pub type LineWidthType = String;
+
+// TODO: margin-type tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum MarginType {
+    Both,
+    Even,
+    Odd,
+}
+
+// TODO: measure-numbering-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum MeasureNumberingValue {
+    None,
+    Measure,
+    System,
+}
+
+pub type MeasureText = String;
+
+// TODO: membrane-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum MembraneValue {
+    #[serde(rename = "bass drum")]
+    BassDrum,
+    #[serde(rename = "bass drum on side")]
+    BassDrumOnSide,
+    Bongos,
+    #[serde(rename = "Chinese tomtom")]
+    ChineseTomtom,
+    #[serde(rename = "conga drum")]
+    CongaDrum,
+    Cuica,
+    #[serde(rename = "goblet drum")]
+    GobletDrum,
+    #[serde(rename = "Indo-American tomtom")]
+    IndoAmericanTomtom,
+    #[serde(rename = "Japanese tomtom")]
+    JapaneseTomtom,
+    #[serde(rename = "military drum")]
+    MilitaryDrum,
+    #[serde(rename = "snare drum")]
+    SnareDrum,
+    #[serde(rename = "snare drum snares off")]
+    SnareDrumSnaresOff,
+    Tabla,
+    Tambourine,
+    #[serde(rename = "tenor drum")]
+    TenorDrum,
+    Timbales,
+    Tomtom,
+}
+
+// TODO: metal-value tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum MetalValue {
+    Agogo,
+    Almglocken,
+    Bell,
+    #[serde(rename = "bell plate")]
+    BellPlate,
+    #[serde(rename = "bell tree")]
+    BellTree,
+    #[serde(rename = "brake drum")]
+    BrakeDrum,
+    Cencerro,
+    #[serde(rename = "chain rattle")]
+    ChainRattle,
+    #[serde(rename = "Chinese cymbal")]
+    ChineseCymbal,
+    Cowbell,
+    #[serde(rename = "crash cymbals")]
+    CrashSymbals,
+    Crotale,
+    #[serde(rename = "cymbal tongs")]
+    CymbalTongs,
+    #[serde(rename = "domed gong")]
+    DomedGong,
+    #[serde(rename = "finger cymbals")]
+    FingerCymbals,
+    Flexatone,
+    Gong,
+    Handbell,
+    #[serde(rename = "hi-hat")]
+    HiHat,
+    #[serde(rename = "high-hat cymbals")]
+    HighHatCymbals,
+    #[serde(rename = "jaw harp")]
+    JawHarp,
+    #[serde(rename = "jingle bells")]
+    JingleBells,
+    #[serde(rename = "musical saw")]
+    MusicalSaw,
+    #[serde(rename = "shell bells")]
+    ShellBells,
+    Sistrum,
+    #[serde(rename = "sizzle cymbal")]
+    SizzleCymbal,
+    #[serde(rename = "sleigh bells")]
+    SleighBells,
+    #[serde(rename = "suspended cymbal")]
+    SuspendedCymbal,
+    #[serde(rename = "tam tam")]
+    TamTam,
+    #[serde(rename = "tam tam with beater")]
+    TamTamWithBeater,
+    Triangle,
+    #[serde(rename = "Vietnamese hat")]
+    VietnameseHat,
+}
+
 // TODO: midi-128
+
 // TODO: midi-16
+
 // TODO: midi-16384
+
 // TODO: millimeters
+
 // TODO: milliseconds
-// TODO: mode
-// TODO: mute
+
+pub type Mode = String;
+
+// TODO: mute tests
+#[derive(Debug, Deserialize, PartialEq, Serialize)]
+#[serde(rename_all = "kebab-case")]
+pub enum Mute {
+    On,
+    Off,
+    Bucket,
+    Cup,
+    Echo,
+    HarmonNoStem,
+    HarmonStem,
+    Hat,
+    Palm,
+    Plunger,
+    Practice,
+    Solotone,
+    StopHand,
+    StopMute,
+    Straight,
+}
+
 // TODO: NMTOKEN
 // TODO: non-negative-decimal
 // TODO: nonNegativeInteger
